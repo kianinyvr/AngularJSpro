@@ -1,10 +1,13 @@
 function ContactCard() {
     return {
-        transclude: true,
+        transclude: {
+            name: 'h1',
+            desc: '?p'
+        },
         template: `
             <div>
-                <h2> Contact </h4>
-                <div ng-transclude></div>
+                <span ng-transclude="name"> Contact </span>
+                <div ng-transclude ="desc"> Nothing here... </div>
             </div>
         `
     }
